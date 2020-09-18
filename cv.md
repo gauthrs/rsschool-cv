@@ -18,7 +18,6 @@
 
 ### Code example
 ```JavaScript
-
 const ajax = (method, options) => {
     let o = options || {},
 		method = method,
