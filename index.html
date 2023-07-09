@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Dmitry (Gauthier) Chernigov</title>
+	<link rel="stylesheet" href="style.css?1">
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;700;900&display=swap" rel="stylesheet">
+</head>
+<body>
+
+	<header>
+		<a class="logo" href="/">GTHR</a>
+	</header>
+	
+	<main>
+		<section class="main-page" id="main">
+			<div class="main_title">
+				<h1>Dmitry (Gauthier) Chernigov</h1>
+				<h3>Middle frontend developer</h3>
+			</div>
+			<div class="personal_photo">
+				<img src="assets/ava_r.png" alt="Dmitry (Gauthier) Chernigov">
+			</div>
+		</section>
+
+		<section id="about">
+			<div class="container">
+				<h2 class="title">About</h2>
+				<p>I’m a Web Developer with 8+ years of experience in both Web Development and freelance. I studied IT in
+					university and graduated with a Specialist Degree (in different countries can be interpreted as an
+					equivalent of a Bachelor’s or Master’s degree). I worked on the design and development of online stores,
+					feedback forms, creation of support chats, landing page design, article editing for online publishers,
+					randomizers, development of activity statistics data on social media, etc. I am an experienced professional,
+					able to fulfill many tasks and do it well, familiar with all the ins and outs of my job.</p>
+			</div>
+		</section>
+
+		<section id="skills">
+			<div class="container">
+				<h2 class="title">Skills</h2>
+				<ul>
+					<li>PHP, SQL Database (MySQL, PDO)</li>
+					<li>HTML5, CSS, JavaScript</li>
+					<li>Apache HTTP Server</li>
+					<li>Linux, Ubuntu</li>
+					<li>Object-oriented programming</li>
+					<li>Adobe Photoshop/Illustrator/Lightroom</li>
+				</ul>
+			</div>
+		</section>
+
+		<section id="education">
+			<div class="container">
+				<h2 class="title">Education</h2>
+
+				<ul>
+					<li>2007 - 2012 - St.-Petersburg State Polytechnical University (Bachelor of Science in Information Technology,
+						Engineering physics)</li>
+				</ul>
+					
+				<h2 class="title">Courses</h2>
+					
+				<ul>
+					<li>2010 - St.-Petersburg State Polytechnical University, Faculty of Specialists training (DEV-P10. Web-Programming
+							usign PHP and MySQL)</li>
+				</ul>
+			</div>
+		</section>
+
+		<section id="code">
+			<div class="container">
+				<h2 class="title">Code Example</h2>
+				<pre>
+					<code>
+const ajax = (method, options) => {
+  let o = options || {},
+  method = method,
+  xhr;
+										
+  let url = o[0];
+  let act = this.encurl(o[1]);
+														
+  let success = o[2];
+																	
+  if (typeof o[3] === 'function') {
+    let errors = o[3];
+    let json = o[4] || false;
+  } else {
+    let json = o[3];
+  }
+														
+  if (w.XMLHttpRequest) { // good browsers & ie7+
+    xhr = new XMLHttpRequest();
+  } else { // ie5 or ie6
+    xhr = new ActiveXObject('Microsoft.XMLHTTP');
+  }
+														
+  xhr.addEventListener('readystatechange', function() {
+    if (this.readyState == 4 && this.status >= 200) {
+      if (typeof success === 'function') {
+        if (json === true) {
+          success(JSON.parse(this.responseText));
+        } else {
+          success(this.responseText);
+        }
+      }
+														
+      if (typeof errors === 'function') {
+        errors();
+      }
+    }
+  });
+														
+  if (method == 'get') {
+    xhr.open('GET', url, true);
+    xhr.send();
+  } else if(method == 'post') {
+    xhr.open('POST', url);
+    xhr.setRequestHeader('Content-Type','application/x-www-form-urlencoded;');
+    xhr.send(act);
+  } else if(method == 'upload') {
+    xhr.open('POST', url);
+    xhr.send(act);
+  }
+};
+					</code>
+				</pre>
+			</div>
+		</section>
+
+
+		<section>
+			<div class="container">
+				<h2 class="title">Contact Info</h2>
+
+				<ul>
+					<li>GitHub: <a href="//github.com/gauthrs" target="_blank">@gauthrs</a></li>
+					<li>Email: <a href="mailto:dmitrygauthier@gmail.com">dmitrygauthier@gmail.com</a></li>
+					<li>Telegram: <a href="//t.me/gauthier" target="_blank">@gauthier</a></li>
+				</ul>
+			</div>
+		</section>
+	</main>
+	
+	<footer>
+		<div class="logo"><a href="https://rs.school/js/" target="_blank"><img src="assets/rs_school_js.svg"
+					alt="rss-logo" /></a></div>
+		<div class="copy">&copy;&nbsp;2023</div>
+		<div class="social"><a href="//github.com/gauthrs" target="_blank"><img src="assets/github-mark-white.png"
+					alt="github-logo" /></a></div>
+	</footer>
+
+</body>
+</html>
